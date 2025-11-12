@@ -148,5 +148,3 @@ yNFTs are our answer to a recurring question: **“How do we make NFTs do real w
 
 MetaBricks yNFTs validate the idea. The same toolkit can power tokenized property management, subscription revenue sharing, music royalties, or loyalty programs. Businesses keep their familiar workflows, communities receive real economic upside, and regulators gain transparent, auditable records.
 
-The entire implementation lives at `https://github.com/maxgershfield/x402-hackathon`. Use it as a starter kit, adapt it to your asset class, and invite your stakeholders into a world where NFTs stand for **yield**, not just **yet another collectible**.
-

@@ -725,13 +725,17 @@ export default function X402DashboardPage() {
                     <p className="text-sm font-semibold text-[var(--accent)]">
                       {entry.amount.toFixed(4)} SOL
                     </p>
-                    <Link
-                      href={`https://solscan.io/tx/${entry.tx}?cluster=devnet`}
-                      target="_blank"
-                      className="text-[10px] text-[var(--accent)] hover:underline"
-                    >
-                      {entry.tx.slice(0, 12)}...
-                    </Link>
+                    {entry.tx ? (
+                      <Link
+                        href={`https://solscan.io/tx/${entry.tx}?cluster=devnet`}
+                        target="_blank"
+                        className="text-[10px] text-[var(--accent)] hover:underline"
+                      >
+                        {entry.tx.slice(0, 12)}...
+                      </Link>
+                    ) : (
+                      <span className="text-[10px] text-[var(--muted)]">pending</span>
+                    )}
                   </div>
                 </div>
               ))}

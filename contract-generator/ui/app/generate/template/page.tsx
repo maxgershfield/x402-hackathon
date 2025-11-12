@@ -352,7 +352,12 @@ export default function TemplateGeneratorPage() {
     setPaymentRequirement(null);
     setPaymentConsoleActive(true);
     paymentLog.info('💰 x402 payment webhook received');
-    paymentLog.info(`💰 Processing x402 payment: ${pricing.price.toFixed(6)} SOL`);
+    const paymentPrice = paymentRequirement?.pricing?.price;
+    if (typeof paymentPrice === 'number') {
+      paymentLog.info(`💰 Processing x402 payment: ${paymentPrice.toFixed(6)} SOL`);
+    } else {
+      paymentLog.info('💰 Processing x402 payment');
+    }
     paymentLog.warning('⚠️ No signature validation (development mode)');
     paymentLog.info(`🎯 Target NFT: ${X402_DEFAULT_NFT}`);
     paymentLog.info('📋 NFT config: equal_split model');
